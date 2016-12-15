@@ -524,6 +524,40 @@ export const ANALYTICS_CONFIG = /** @type {!JSONType} */ ({
     },
   },
 
+'measurely': {
+    'vars': {
+      'resource_id': '0',
+    },
+    'requests': {
+      'host': 'https://amp.measure.ly',
+      'base': '${host}/track'
+      'pageview': '${basePrefix}?action=pageview' +
+                  '&resource=${resource_id}' +
+                  '&title=${title}' +
+                  '&url=${canonicalUrl}' +
+                  '&refer=${documentReferrer}' +
+                  '&screenRes=${screenWidth}x${screenHeight}' +
+                  '&lang=${browserLanguage}' +
+                  '&title=${title}' +
+                  '&authors=${authors}' +
+                  '&sponsor=${sponsorName}' +
+                  '&scrollTop=${scrollTop}' +
+                  '&scrollHeight=${scrollHeight}' +
+                  '&timeOnPage=${totalEngagedTime}'
+    },
+    'triggers': {
+      'defaultPageview': {
+        'on': 'visible',
+        'request': 'pageview',
+      },
+    },
+    'transport': {
+      'beacon': false,
+      'xhrpost': false,
+      'image': true,
+    },
+},
+
   'mediametrie': {
     'requests': {
       'host': 'https://prof.estat.com/m/web',

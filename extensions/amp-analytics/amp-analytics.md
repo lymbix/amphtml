@@ -176,6 +176,12 @@ Type attribute value: `lotame`
 
 Adds support for Lotame.  More information and configuration details can be found at [mylotame.force.com](https://mylotame.force.com/s/article/Google-AMP).
 
+### Measurely
+
+Type attribute value: `measurely`
+
+Adds support for Measurely.  Must define *var* `resource_id`.  Further detail can be accessed at [docs.measurelyapp.com](http://docs.measurelyapp.com/).
+
 ### Médiamétrie
 
 Type attribute value: `mediametrie`
